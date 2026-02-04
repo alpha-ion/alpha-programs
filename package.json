@@ -1,5 +1,5 @@
 {
-  "name": "alpha-programs-v1",
+  "name": "alpha-programs",
   "private": true,
   "scripts": {
     "build": "turbo run build",
