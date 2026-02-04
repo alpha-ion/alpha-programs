@@ -20,6 +20,12 @@ importers:
 
   apps/qr-code-generator:
     dependencies:
+      '@repo/qr-core':
+        specifier: workspace:*
+        version: link:../../packages/qr-core
+      '@repo/qr-types':
+        specifier: workspace:*
+        version: link:../../packages/qr-types
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -117,6 +123,28 @@ importers:
       typescript-eslint:
         specifier: ^8.50.0
         version: 8.50.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
+
+  packages/qr-core:
+    dependencies:
+      '@repo/qr-types':
+        specifier: workspace:*
+        version: link:../qr-types
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  packages/qr-types:
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
 
   packages/typescript-config: {}
 

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: ['@repo/qr-core', '@repo/qr-types', '@repo/ui'],
 };
 
 export default nextConfig;
