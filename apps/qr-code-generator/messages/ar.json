@@ -1,0 +1,91 @@
+{
+    "contact-form": {
+        "firstName": "الاسم الأول",
+        "firstNamePlaceholder": "أدخل الاسم الأول",
+        "lastName": "اسم العائلة",
+        "lastNamePlaceholder": "أدخل اسم العائلة",
+        "phone": "رقم الهاتف",
+        "phonePlaceholder": "+1 234 567 8900",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "example@email.com",
+        "organization": "المؤسسة",
+        "organizationPlaceholder": "اسم الشركة أو المؤسسة",
+        "website": "الموقع الإلكتروني",
+        "websitePlaceholder": "https://example.com",
+        "addressSection": "معلومات العنوان",
+        "optional": "اختياري",
+        "street": "الشارع",
+        "streetPlaceholder": "123 شارع رئيسي",
+        "city": "المدينة",
+        "cityPlaceholder": "نيويورك",
+        "state": "الولاية / المقاطعة",
+        "statePlaceholder": "NY",
+        "postalCode": "الرمز البريدي",
+        "postalCodePlaceholder": "10001",
+        "country": "البلد",
+        "countryPlaceholder": "الولايات المتحدة",
+        "requiredFieldsNote": "الحقول المميزة بـ * مطلوبة"
+    },
+    "url-form": {
+        "urlLabel": "الرابط",
+        "urlPlaceholder": "https://example.com",
+        "urlHint": "سيتم إضافة https:// تلقائيًا إذا لم يكن موجودًا"
+    },
+    "text-form": {
+        "textLabel": "النص",
+        "textPlaceholder": "أدخل النص لتحويله إلى رمز QR",
+        "textHint": "يمكنك إدخال ما يصل إلى 2000 حرف"
+    },
+    "nav": {
+        "appTitle": "مولد رموز QR",
+        "poweredBy": "مشغل بواسطة Alpha"
+    },
+    "footer": {
+        "builtBy": "تم بناؤه بواسطة فريق خلف",
+        "rightsReserved": "Alpha. جميع الحقوق محفوظة.",
+        "shortcuts": "اختصارات لوحة المفاتيح",
+        "download": "تحميل",
+        "copy": "نسخ"
+    },
+    "validation": {
+        "urlRequired": "الرابط مطلوب",
+        "urlInvalid": "يرجى إدخال رابط صحيح",
+        "textRequired": "النص مطلوب",
+        "textTooLong": "النص طويل جدًا (الحد الأقصى 2000 حرف)",
+        "firstNameRequired": "الاسم الأول مطلوب",
+        "firstNameTooLong": "الاسم الأول طويل جدًا",
+        "lastNameTooLong": "اسم العائلة طويل جدًا",
+        "phoneInvalid": "يرجى إدخال رقم هاتف صحيح",
+        "phoneRequired": "رقم الهاتف مطلوب",
+        "phoneTooLong": "رقم الهاتف طويل جدًا",
+        "emailInvalid": "يرجى إدخال بريد إلكتروني صحيح",
+        "emailTooLong": "البريد الإلكتروني طويل جدًا",
+        "orgTooLong": "اسم المؤسسة طويل جدًا",
+        "urlTooLong": "الرابط طويل جدًا",
+        "streetTooLong": "اسم الشارع طويل جدًا",
+        "cityTooLong": "اسم المدينة طويل جدًا",
+        "stateTooLong": "اسم الولاية طويل جدًا",
+        "postalCodeTooLong": "الرمز البريدي طويل جدًا",
+        "countryTooLong": "اسم البلد طويل جدًا"
+    },
+    "metadata": {
+        "title": "مولد رموز QR",
+        "description": "مولد رموز QR مجاني للروابط والنصوص وجهات الاتصال"
+    },
+    "main-page": {
+        "appDescription": "مولد رموز QR مجاني",
+        "footerText": "أنشئ رموز QR للروابط والنصوص ومعلومات الاتصال",
+        "loading": "تحديد...",
+        "fillFormPrompt": "املأ النموذج لإنشاء رمز QR",
+        "download": "تحميل",
+        "copyData": "نسخ",
+        "copied": "تم النسخ",
+        "clearAllFields": "مسح جميع الحقول",
+        "urlTab": "رابط",
+        "textTab": "نص",
+        "contactTab": "جهة اتصال",
+        "generatedQrCode": "رمز QR المولد",
+        "qrCanvas": "لوحة رمز QR",
+        "qrImage": "صورة رمز QR المولد"
+    }
+}

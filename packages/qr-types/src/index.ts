@@ -1,42 +1,11 @@
-/**
- * @repo/qr-types
- * 
- * Shared TypeScript type definitions for QR Code generation system.
- * This package provides a single source of truth for all types across the application.
- */
-
-// ============================================================================
-// Content Types
-// ============================================================================
-
-/**
- * Supported QR code content types
- */
 export type QRContentType = 'url' | 'text' | 'contact' | 'email' | 'phone' | 'wifi' | 'sms';
 
-/**
- * Error correction levels for QR codes
- * L = ~7% correction, M = ~15%, Q = ~25%, H = ~30%
- */
 export type QRErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';
 
-/**
- * Export format options
- */
 export type QRExportFormat = 'png' | 'svg' | 'pdf' | 'jpg';
 
-/**
- * QR code size presets
- */
 export type QRSizePreset = 'small' | 'medium' | 'large' | 'xlarge' | 'custom';
 
-// ============================================================================
-// Contact Information
-// ============================================================================
-
-/**
- * Contact information for vCard generation
- */
 export interface QRContactInfo {
   firstName: string;
   lastName: string;
@@ -55,45 +24,23 @@ export interface QRContactInfo {
   notes?: string;
 }
 
-// ============================================================================
-// Branding & Customization
-// ============================================================================
-
-/**
- * Color configuration for QR codes
- */
 export interface QRColorOptions {
   foreground: string;
   background: string;
 }
 
-/**
- * Logo embedding options
- */
 export interface QRLogoOptions {
   url: string;
   size: number;
   margin: number;
   cornerRadius?: number;
 }
-
-/**
- * Complete branding options
- */
 export interface QRBrandingOptions {
   colors: QRColorOptions;
   logo?: QRLogoOptions;
   cornerStyle?: 'square' | 'rounded' | 'dot';
   dotStyle?: 'square' | 'rounded' | 'dot';
 }
-
-// ============================================================================
-// Generation Options
-// ============================================================================
-
-/**
- * Complete options for QR code generation
- */
 export interface QRGenerationOptions {
   content: string;
   contentType: QRContentType;
@@ -102,16 +49,12 @@ export interface QRGenerationOptions {
   branding?: Partial<QRBrandingOptions>;
   margin?: number;
 }
-
-/**
- * Result of QR code generation
- */
 export interface QRGenerationResult {
   success: boolean;
-  data?: string; // Base64 or URL
-  dataUrl?: string; // Data URL for canvas
+  data?: string;
+  dataUrl?: string;
   error?: string;
-  strategy?: string; // Which generator was used
+  strategy?: string;
   timestamp: number;
   metadata?: {
     size: number;
@@ -120,14 +63,6 @@ export interface QRGenerationResult {
     contentLength: number;
   };
 }
-
-// ============================================================================
-// Storage & History
-// ============================================================================
-
-/**
- * Stored QR code record
- */
 export interface QRCodeRecord {
   id: string;
   content: string;
@@ -144,9 +79,6 @@ export interface QRCodeRecord {
   };
 }
 
-/**
- * Options for listing stored QR codes
- */
 export interface QRListOptions {
   limit?: number;
   offset?: number;
@@ -155,60 +87,15 @@ export interface QRListOptions {
   contentType?: QRContentType;
   tags?: string[];
   favorite?: boolean;
-}
-
-// ============================================================================
-// Storage Provider Interface
-// ============================================================================
-
-/**
- * Abstract storage provider interface
- * Implementations: IndexedDB, localStorage, remote API
- */
-export interface QRStorageProvider {
-  /**
-   * Save a QR code record
-   */
+}export interface QRStorageProvider {
   save(record: QRCodeRecord): Promise<void>;
-
-  /**
-   * Get a QR code by ID
-   */
   get(id: string): Promise<QRCodeRecord | null>;
-
-  /**
-   * List QR codes with optional filtering
-   */
   list(options?: QRListOptions): Promise<QRCodeRecord[]>;
-
-  /**
-   * Update an existing record
-   */
   update(id: string, updates: Partial<QRCodeRecord>): Promise<void>;
-
-  /**
-   * Delete a QR code
-   */
   delete(id: string): Promise<void>;
-
-  /**
-   * Delete all QR codes
-   */
   clear(): Promise<void>;
-
-  /**
-   * Export all data
-   */
   export(): Promise<QRCodeRecord[]>;
-
-  /**
-   * Import data
-   */
   import(records: QRCodeRecord[]): Promise<void>;
-
-  /**
-   * Get storage statistics
-   */
   getStats(): Promise<{
     count: number;
     size: number;
@@ -217,18 +104,8 @@ export interface QRStorageProvider {
   }>;
 }
 
-// ============================================================================
-// Analytics & Tracking
-// ============================================================================
-
-/**
- * Scan event types
- */
 export type QRScanEventType = 'view' | 'scan' | 'download' | 'share';
 
-/**
- * Analytics event
- */
 export interface QRAnalyticsEvent {
   id: string;
   qrCodeId: string;
@@ -241,10 +118,6 @@ export interface QRAnalyticsEvent {
     referrer?: string;
   };
 }
-
-/**
- * Analytics provider interface
- */
 export interface QRAnalyticsProvider {
   track(event: QRAnalyticsEvent): Promise<void>;
   getEvents(qrCodeId: string): Promise<QRAnalyticsEvent[]>;
@@ -256,34 +129,16 @@ export interface QRAnalyticsProvider {
   }>;
 }
 
-// ============================================================================
-// Validation
-// ============================================================================
-
-/**
- * Validation result
- */
 export interface QRValidationResult {
   valid: boolean;
   errors: string[];
   warnings?: string[];
-  sanitized?: string; // Cleaned/normalized version
+  sanitized?: string;
 }
 
-/**
- * Content validator interface
- */
 export interface QRContentValidator {
   validate(content: string, contentType: QRContentType): QRValidationResult;
 }
-
-// ============================================================================
-// Generator Strategy
-// ============================================================================
-
-/**
- * QR generator strategy interface
- */
 export interface QRGeneratorStrategy {
   name: string;
   priority: number;
@@ -291,43 +146,21 @@ export interface QRGeneratorStrategy {
   generate(options: QRGenerationOptions): Promise<QRGenerationResult>;
 }
 
-// ============================================================================
-// Export Options
-// ============================================================================
-
-/**
- * Options for exporting QR codes
- */
 export interface QRExportOptions {
   format: QRExportFormat;
   size?: number;
-  quality?: number; // 0-1 for JPG
+  quality?: number;
   filename?: string;
   includeMetadata?: boolean;
 }
-
-/**
- * Export result
- */
 export interface QRExportResult {
   success: boolean;
   blob?: Blob;
   error?: string;
   filename: string;
 }
-
-// ============================================================================
-// Internationalization
-// ============================================================================
-
-/**
- * Supported locales
- */
 export type Locale = 'en-US' | 'es-ES' | 'ar-EG' | 'fr-FR' | 'de-DE' | 'zh-CN';
 
-/**
- * Translation keys
- */
 export interface Translation {
   appTitle: string;
   appDescription: string;
@@ -362,34 +195,14 @@ export interface Translation {
   [key: string]: string;
 }
 
-// ============================================================================
-// Utility Types
-// ============================================================================
-
-/**
- * Make specific properties required
- */
 export type RequireFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 
-/**
- * Make specific properties optional
- */
 export type PartialFields<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 
-/**
- * Deep partial type
- */
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
-// ============================================================================
-// Configuration
-// ============================================================================
-
-/**
- * Application configuration
- */
 export interface QRAppConfig {
   defaultSize: number;
   defaultErrorCorrection: QRErrorCorrectionLevel;
@@ -401,13 +214,6 @@ export interface QRAppConfig {
   apiEndpoint?: string;
 }
 
-// ============================================================================
-// Type Guards
-// ============================================================================
-
-/**
- * Type guard for QRGenerationResult
- */
 export function isQRGenerationResult(obj: unknown): obj is QRGenerationResult {
   return (
     typeof obj === 'object' &&
@@ -417,9 +223,6 @@ export function isQRGenerationResult(obj: unknown): obj is QRGenerationResult {
   );
 }
 
-/**
- * Type guard for QRCodeRecord
- */
 export function isQRCodeRecord(obj: unknown): obj is QRCodeRecord {
   return (
     typeof obj === 'object' &&

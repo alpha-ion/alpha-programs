@@ -1,0 +1,91 @@
+{
+    "contact-form": {
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Enter first name",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Enter last name",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+1 234 567 8900",
+        "email": "Email",
+        "emailPlaceholder": "example@email.com",
+        "organization": "Organization",
+        "organizationPlaceholder": "Company or organization name",
+        "website": "Website",
+        "websitePlaceholder": "https://example.com",
+        "addressSection": "Address Information",
+        "optional": "optional",
+        "street": "Street",
+        "streetPlaceholder": "123 Main Street",
+        "city": "City",
+        "cityPlaceholder": "New York",
+        "state": "State/Province",
+        "statePlaceholder": "NY",
+        "postalCode": "Postal Code",
+        "postalCodePlaceholder": "10001",
+        "country": "Country",
+        "countryPlaceholder": "United States",
+        "requiredFieldsNote": "Fields marked with * are required"
+    },
+    "url-form": {
+        "urlLabel": "URL",
+        "urlPlaceholder": "https://example.com",
+        "urlHint": "https:// will be added automatically if not present"
+    },
+    "text-form": {
+        "textLabel": "Text",
+        "textPlaceholder": "Enter text to convert to QR code",
+        "textHint": "You can enter up to 2000 characters"
+    },
+    "nav": {
+        "appTitle": "QR Code Generator",
+        "poweredBy": "Powered by Alpha"
+    },
+    "footer": {
+        "builtBy": "Built by the team behind",
+        "rightsReserved": "Alpha. All rights reserved.",
+        "shortcuts": "Keyboard shortcuts",
+        "download": "Download",
+        "copy": "Copy"
+    },
+    "validation": {
+        "urlRequired": "URL is required",
+        "urlInvalid": "Please enter a valid URL",
+        "textRequired": "Text is required",
+        "textTooLong": "Text is too long (maximum 2000 characters)",
+        "firstNameRequired": "First name is required",
+        "firstNameTooLong": "First name is too long",
+        "lastNameTooLong": "Last name is too long",
+        "phoneInvalid": "Please enter a valid phone number",
+        "phoneRequired": "Phone number is required",
+        "phoneTooLong": "Phone number is too long",
+        "emailInvalid": "Please enter a valid email address",
+        "emailTooLong": "Email is too long",
+        "orgTooLong": "Organization name is too long",
+        "urlTooLong": "URL is too long",
+        "streetTooLong": "Street is too long",
+        "cityTooLong": "City is too long",
+        "stateTooLong": "State is too long",
+        "postalCodeTooLong": "Postal code is too long",
+        "countryTooLong": "Country is too long"
+    },
+    "metadata": {
+        "title": "QR Code Generator",
+        "description": "Free QR Code Generator for URLs, text, and contacts"
+    },
+    "main-page": {
+        "appDescription": "Free QR Code Generator",
+        "footerText": "Create QR codes for URLs, text, and contact information",
+        "loading": "Loading...",
+        "fillFormPrompt": "Fill the form to generate QR code",
+        "download": "Download",
+        "copyData": "Copy",
+        "copied": "Copied",
+        "clearAllFields": "Clear all fields",
+        "urlTab": "URL",
+        "textTab": "Text",
+        "contactTab": "Contact",
+        "generatedQrCode": "Generated QR Code",
+        "qrCanvas": "QR Code Canvas",
+        "qrImage": "Generated QR Code Image"
+    }
+}
