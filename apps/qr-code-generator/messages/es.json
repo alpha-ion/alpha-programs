@@ -1,0 +1,52 @@
+{
+    "contact-form": {
+        "firstName": "Nombre",
+        "firstNamePlaceholder": "Ingrese el nombre",
+        "lastName": "Apellido",
+        "lastNamePlaceholder": "Ingrese el apellido",
+        "phone": "Número de teléfono",
+        "phonePlaceholder": "+1 234 567 8900",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "ejemplo@correo.com",
+        "organization": "Organización",
+        "organizationPlaceholder": "Nombre de la empresa u organización",
+        "website": "Sitio web",
+        "websitePlaceholder": "https://ejemplo.com",
+        "addressSection": "Información de dirección",
+        "optional": "opcional",
+        "street": "Calle",
+        "streetPlaceholder": "Calle Principal 123",
+        "city": "Ciudad",
+        "cityPlaceholder": "Nueva York",
+        "state": "Estado/Provincia",
+        "statePlaceholder": "NY",
+        "postalCode": "Código postal",
+        "postalCodePlaceholder": "10001",
+        "country": "País",
+        "countryPlaceholder": "Estados Unidos",
+        "requiredFieldsNote": "Los campos marcados con * son obligatorios"
+    },
+    "url-form": {
+        "urlLabel": "URL",
+        "urlPlaceholder": "https://ejemplo.com",
+        "urlHint": "Se añadirá https:// automáticamente si no está presente"
+    },
+    "text-form": {
+        "textLabel": "Texto",
+        "textPlaceholder": "Ingrese el texto para convertir a código QR",
+        "textHint": "Puede ingresar hasta 2000 caracteres"
+    },
+    "main-page": {
+        "appDescription": "Generador de códigos QR gratuito",
+        "footerText": "Cree códigos QR para URL, texto e información de contacto",
+        "loading": "Cargando...",
+        "fillFormPrompt": "Complete el formulario para generar el código QR",
+        "download": "Descargar",
+        "copyData": "Copiar",
+        "copied": "Copiado",
+        "clearAllFields": "Limpiar todos los campos",
+        "urlTab": "URL",
+        "textTab": "Texto",
+        "contactTab": "Contacto"
+    }
+}
